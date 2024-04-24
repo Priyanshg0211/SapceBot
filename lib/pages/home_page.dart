@@ -47,6 +47,9 @@ class _HomePageState extends State<HomePage> {
                     child: CircleAvatar(
                       radius: 30,
                       backgroundColor: Theme.of(context).primaryColor,
+                      child: Center(
+                        child: Icon(Icons.send,color: Colors.white,),
+                      ),
                       
                     ),
                   ),
