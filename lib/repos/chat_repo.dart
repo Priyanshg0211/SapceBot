@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:spacebot/models/chat_message_model.dart';
@@ -9,7 +9,7 @@ class ChatRepo {
     try {
       Dio dio = Dio();
 
-      final response = dio.post(
+      final response = await dio.post(
           "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=${apikey}",
           data: {
             "contents": previousMessages.map((e) => e.toMap()).toList(),
@@ -39,9 +39,9 @@ class ChatRepo {
               }
             ]
           });
-          log(response.toString() as num);
+          log(response.toString());
     } catch (e) {
-      log(e.toString() as num);
+      log(e.toString());
     }
   }
 }
