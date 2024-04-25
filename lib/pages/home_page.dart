@@ -57,7 +57,13 @@ class _HomePageState extends State<HomePage> {
                                     borderRadius: BorderRadius.circular(16),
                                     color: Colors.amber.withOpacity(0.1),
                                   ),
-                                  child: Text(message[index].parts.first.text));
+                                  child: Column(
+                                    children: [
+                                      Text(message[index].role == "user"? "user" : "AI",style: TextStyle(color: Colors.deepPurple,fontSize: 20),),
+                                      const SizedBox(height: 10,),
+                                      Text(message[index].parts.first.text),
+                                    ],
+                                  ));
                             })),
                     Container(
                       padding:
