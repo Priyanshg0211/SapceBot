@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:spacebot/models/chat_message_model.dart';
+import 'package:spacebot/utils/constants.dart';
 
 class SpaceRepo {
   static chatTextGenerationRepo(
@@ -8,6 +9,7 @@ class SpaceRepo {
         
 
 
-        final response = dio.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=AIzaSyD_GykhxlwLXMHvZP4q1g6qtYoH_J7sSHE");
+        final response = dio.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=${apikey}",
+        );
       }
 }
