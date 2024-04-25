@@ -51,7 +51,8 @@ class _HomePageState extends State<HomePage> {
                             itemCount: message.length,
                             itemBuilder: (context, index) {
                               return Container(
-                                  padding: const EdgeInsets.all(16),
+                                  margin: EdgeInsets.only(bottom: 12),
+                                  padding: EdgeInsets.all(16),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(16),
                                     color: Colors.amber.withOpacity(0.1),
@@ -87,8 +88,10 @@ class _HomePageState extends State<HomePage> {
                           InkWell(
                             onTap: () {
                               if (textEditingController.text.isNotEmpty) {
+                                String text = textEditingController.text;
+                                textEditingController.clear();
                                 chatBloc.add(ChatGenerateNewTextMessageEvent(
-                                    inputMessage: textEditingController.text));
+                                    inputMessage: text));
                               }
                             },
                             child: CircleAvatar(
