@@ -46,7 +46,18 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                    Expanded(child: ListView()),
+                    Expanded(
+                        child: ListView.builder(
+                            itemCount: message.length,
+                            itemBuilder: (context, index) {
+                              return Container(
+                                  padding: const EdgeInsets.all(16),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(16),
+                                    color: Colors.amber.withOpacity(0.1),
+                                  ),
+                                  child: Text(message[index].parts.first.text));
+                            })),
                     Container(
                       padding:
                           EdgeInsets.symmetric(vertical: 30, horizontal: 16),
