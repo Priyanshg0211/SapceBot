@@ -15,8 +15,16 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Container(
-              height: 120,
-              color: Colors.red,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              height: 100,
+              child: const Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Space Pod",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                  Icon(Icons.image_search,color: Colors.white,)
+                ],
+              ),
             ),
             Expanded(child: ListView()),
             Container(
@@ -40,7 +48,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   )),
-                  const SizedBox(width: 12,),
+                  const SizedBox(
+                    width: 12,
+                  ),
                   CircleAvatar(
                     radius: 32,
                     backgroundColor: Colors.white,
@@ -48,9 +58,11 @@ class _HomePageState extends State<HomePage> {
                       radius: 30,
                       backgroundColor: Theme.of(context).primaryColor,
                       child: Center(
-                        child: Icon(Icons.send,color: Colors.white,),
+                        child: Icon(
+                          Icons.send,
+                          color: Colors.white,
+                        ),
                       ),
-                      
                     ),
                   ),
                 ],

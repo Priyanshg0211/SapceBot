@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       theme: ThemeData(
         brightness: Brightness.dark,
+        fontFamily: 'SixtyFour',
         scaffoldBackgroundColor: Colors.grey.shade900,
         primaryColor: Colors.grey.shade900,
       ),
