@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:spacebot/models/chat_message_model.dart';
 import 'package:spacebot/utils/constants.dart';
 
-class SpaceRepo {
+class ChatRepo {
   static chatTextGenerationRepo(List<ChatMessageModel> previousMessages) async {
     try {
       Dio dio = Dio();
