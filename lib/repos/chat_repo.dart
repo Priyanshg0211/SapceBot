@@ -5,7 +5,8 @@ import 'package:spacebot/models/chat_message_model.dart';
 import 'package:spacebot/utils/constants.dart';
 
 class ChatRepo {
-  static chatTextGenerationRepo(List<ChatMessageModel> previousMessages) async {
+  static Future<String> chatTextGenerationRepo(
+      List<ChatMessageModel> previousMessages) async {
     try {
       Dio dio = Dio();
 
@@ -39,9 +40,16 @@ class ChatRepo {
               }
             ]
           });
-          log(response.toString());
+          if(response.statusCode!>=200 && response.statusCode!<300){
+
+            return response.data['candidates'].first['content']['parts'].first['text'];
+          }
+
+
+      return '';
     } catch (e) {
       log(e.toString());
+      return '';
     }
   }
 }
