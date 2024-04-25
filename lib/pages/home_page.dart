@@ -65,6 +65,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Expanded(
                               child: TextField(
+                            controller: textEditingController,
                             style: TextStyle(color: Colors.black),
                             cursorColor: Theme.of(context).primaryColor,
                             decoration: InputDecoration(
