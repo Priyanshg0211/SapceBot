@@ -1,0 +1,3 @@
+class SpaceRepo {
+  static
+}
