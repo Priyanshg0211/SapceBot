@@ -1,16 +1,11 @@
-# spacebot
+# Space Bot
+Welcome to Space Bot, a Flutter application created using the Gemini API and implemented using the Bloc pattern. This README will guide you through the setup process and provide an overview of the project structure and functionality.
 
-A new Flutter project.
+# Introduction
+Space Bot is a mobile application designed to provide users with information about space, including celestial bodies, missions, and other space-related data. It utilizes the Gemini API to fetch relevant information and presents it in a user-friendly interface.
 
-## Getting Started
+# Note: Currently Working on It
+I am actively working on making Space Bot more interactive and engaging. Stay tuned for exciting updates!
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Contributing
+Contributions to Space Bot are welcome! If you find any bugs or have ideas for enhancements, please open an issue or submit a pull request. Before contributing, please review the contribution guidelines.
