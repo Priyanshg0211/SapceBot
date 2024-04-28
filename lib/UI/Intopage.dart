@@ -27,41 +27,43 @@ class _IntorpageState extends State<Intorpage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Explore the\nUniverse',
-                style: TextStyle(
-                    fontFamily: 'Product sans',
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold),
+              Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Text(
+                  'Explore the\nUniverse',
+                  style: TextStyle(
+                      fontFamily: 'Product sans',
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
               SizedBox(
                 height: 5,
               ),
-              Text(
-                'Journey through the cosmos\nwith our space app',
-                style: TextStyle(
-                    fontFamily: 'Product Sans',
-                    fontSize: 18,
-                    color: Color(0xFFB4B4B4)),
+              Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Text(
+                  'Journey through the cosmos\nwith our space app',
+                  style: TextStyle(
+                      fontFamily: 'Product Sans',
+                      fontSize: 15,
+                      color: Color(0xFFB4B4B4)),
+                ),
               ),
               SizedBox(
-                height: 12,
+                height: 25,
               ),
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  onPressed: () {},
-                  child: Text(
-                    'Get Started',
-                    style: TextStyle(
+              Padding(
+                  padding: EdgeInsets.only(left: 20),
+                  child: IconButton(
+                      style: IconButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.arrow_forward_ios_rounded,
                         color: Colors.black,
-                        fontFamily: 'Product Sans',
-                        fontSize: 15),
-                  )),
+                      ))),
             ],
           )
         ],
