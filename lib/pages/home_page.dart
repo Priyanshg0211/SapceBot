@@ -10,12 +10,13 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> {  
   final ChatBloc chatBloc = ChatBloc();
   TextEditingController textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: BlocConsumer<ChatBloc, ChatState>(
         bloc: chatBloc,
         listener: (context, state) {},
@@ -35,9 +36,11 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Space Pod",
+                            "Space Bot",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
+                                color: Colors.white,
+                                fontFamily: 'Product Sans',
+                               fontSize: 20),
                           ),
                           Icon(
                             Icons.image_search,
@@ -55,11 +58,11 @@ class _HomePageState extends State<HomePage> {
                                   padding: EdgeInsets.all(16),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(16),
-                                    color: Colors.amber.withOpacity(0.1),
+                                 
                                   ),
                                   child: Column(
                                     children: [
-                                      Text(message[index].role == "user"? "user" : "AI",style: TextStyle(color: Colors.deepPurple,fontSize: 20),),
+                                      Text(message[index].role == "user"? "user" : "AI",style: TextStyle(fontFamily: 'Product Sans',color: Colors.deepPurple,fontSize: 20),),
                                       const SizedBox(height: 10,),
                                       Text(message[index].parts.first.text),
                                     ],
@@ -73,18 +76,18 @@ class _HomePageState extends State<HomePage> {
                           Expanded(
                               child: TextField(
                             controller: textEditingController,
-                            style: TextStyle(color: Colors.black),
-                            cursorColor: Theme.of(context).primaryColor,
+                            style: TextStyle(color: Colors.white),
+                            cursorColor: Colors.white,
                             decoration: InputDecoration(
+                              hintText: 'Enter your Queston',
+                              hintStyle: TextStyle(fontFamily: 'Product Sans',fontSize: 15,color: Colors.white.withOpacity(0.5)),
                               border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(50),
+                                borderRadius: BorderRadius.circular(18),
                               ),
-                              fillColor: Colors.white,
-                              filled: true,
                               focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(50),
+                                borderRadius: BorderRadius.circular(18),
                                 borderSide: BorderSide(
-                                    color: Theme.of(context).primaryColor),
+                                    color: Colors.white),
                               ),
                             ),
                           )),
@@ -101,11 +104,11 @@ class _HomePageState extends State<HomePage> {
                               }
                             },
                             child: CircleAvatar(
-                              radius: 32,
+                              radius: 27,
                               backgroundColor: Colors.white,
                               child: CircleAvatar(
-                                radius: 30,
-                                backgroundColor: Theme.of(context).primaryColor,
+                                radius: 25,
+                                backgroundColor: Colors.black,
                                 child: Center(
                                   child: Icon(
                                     Icons.send,

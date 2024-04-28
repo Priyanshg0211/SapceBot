@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spacebot/UI/GettingStart.dart';
 import 'package:spacebot/pages/home_page.dart';
 
 class Intorpage extends StatefulWidget {
@@ -34,6 +33,7 @@ class _IntorpageState extends State<Intorpage> {
                 child: Text(
                   'Explore the\nUniverse',
                   style: TextStyle(
+                      color: Colors.white,
                       fontFamily: 'Product sans',
                       fontSize: 40,
                       fontWeight: FontWeight.bold),
