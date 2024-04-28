@@ -10,11 +10,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Intorpage(),
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: Colors.grey.shade900,
-        primaryColor: Colors.grey.shade900,
-      ),
     );
   }
 }

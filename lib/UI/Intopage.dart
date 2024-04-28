@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:spacebot/UI/GettingStart.dart';
+import 'package:spacebot/pages/home_page.dart';
 
 class Intorpage extends StatefulWidget {
   const Intorpage({super.key});
@@ -59,7 +61,13 @@ class _IntorpageState extends State<Intorpage> {
                       style: IconButton.styleFrom(
                         backgroundColor: Colors.white,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        print("The button is pressed");
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomePage()));
+                      },
                       icon: Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.black,
