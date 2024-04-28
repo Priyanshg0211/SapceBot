@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {  
+class _HomePageState extends State<HomePage> {
   final ChatBloc chatBloc = ChatBloc();
   TextEditingController textEditingController = TextEditingController();
   @override
@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: 'Product Sans',
-                               fontSize: 20),
+                                fontSize: 20),
                           ),
                           Icon(
                             Icons.image_search,
@@ -58,13 +58,29 @@ class _HomePageState extends State<HomePage> {
                                   padding: EdgeInsets.all(16),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(16),
-                                 
                                   ),
                                   child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Text(message[index].role == "user"? "user" : "AI",style: TextStyle(fontFamily: 'Product Sans',color: Colors.deepPurple,fontSize: 20),),
-                                      const SizedBox(height: 10,),
-                                      Text(message[index].parts.first.text),
+                                      Text(
+                                        textAlign: TextAlign.start,
+                                        message[index].role == "user"
+                                            ? "User"
+                                            : "AI",
+                                        style: TextStyle(
+                                            fontFamily: 'Product Sans',
+                                            color: Colors.amber,
+                                            fontSize: 20),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      Text(
+                                        message[index].parts.first.text,
+                                        style: TextStyle(
+                                            fontFamily: 'Product Sans',
+                                            color: Colors.white, fontSize: 18),
+                                      ),
                                     ],
                                   ));
                             })),
@@ -79,15 +95,17 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyle(color: Colors.white),
                             cursorColor: Colors.white,
                             decoration: InputDecoration(
-                              hintText: 'Enter your Queston',
-                              hintStyle: TextStyle(fontFamily: 'Product Sans',fontSize: 15,color: Colors.white.withOpacity(0.5)),
+                              hintText: 'Enter your Question',
+                              hintStyle: TextStyle(
+                                  fontFamily: 'Product Sans',
+                                  fontSize: 15,
+                                  color: Colors.white.withOpacity(0.5)),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(18),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(18),
-                                borderSide: BorderSide(
-                                    color: Colors.white),
+                                borderSide: BorderSide(color: Colors.white),
                               ),
                             ),
                           )),
