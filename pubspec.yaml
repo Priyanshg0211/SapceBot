@@ -60,12 +60,14 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-assets:
-  - assets/spacebg.jpg
-  #   - images/a_dot_ham.jpeg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
@@ -76,9 +78,9 @@ assets:
   # list giving the asset and other descriptors for the font. For
   # example:
 fonts:
-  - family: SixtyFour
+  - family: Product Sans
     fonts:
-      - asset: assets/Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf
+      - asset: assets/fonts/Product Sans Regular.ttf
 
   #   - family: Trajan Pro
   #     fonts:
